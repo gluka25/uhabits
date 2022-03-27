@@ -86,7 +86,7 @@ abstract class BaseAndroidTest : TestCase() {
         appComponent = DaggerHabitsApplicationTestComponent
             .builder()
             .appContextModule(AppContextModule(context))
-            .habitsModule(HabitsModule(dbFile))
+            //.habitsModule(HabitsModule(dbFile))
             .build()
         HabitsApplication.component = appComponent
         prefs = appComponent.preferences

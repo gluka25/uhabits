@@ -23,10 +23,11 @@ import org.isoron.uhabits.core.AppScope
 import org.isoron.uhabits.inject.AppContextModule
 import org.isoron.uhabits.inject.HabitsApplicationComponent
 import org.isoron.uhabits.inject.HabitsModule
+import org.isoron.uhabits.inject.HabitsTestModule
 import org.isoron.uhabits.intents.IntentScheduler
 
 @AppScope
-@Component(modules = [AppContextModule::class, HabitsModule::class, SingleThreadModule::class])
+@Component(modules = [AppContextModule::class, /*HabitsModule::class,*/ SingleThreadModule::class, HabitsTestModule::class])
 interface HabitsApplicationTestComponent : HabitsApplicationComponent {
     val intentScheduler: IntentScheduler?
 }
